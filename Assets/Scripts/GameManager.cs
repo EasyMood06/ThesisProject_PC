@@ -12,11 +12,14 @@ public class GameManager : MonoBehaviour
     public float TravelDistance;
 
     Controller controller;
+    public PlayerScore playerScore;
 
     // Start is called before the first frame update
     void Start()
     {
         controller = FindObjectOfType<Controller>();
+        
+
         gameTime = 0f;
         remainTime = 100f;
         ItemCollectionTimes = 0;
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     void GameOverDataPrint()
     {
+        
+        
         print("Game total time is " + gameTime);
         print("Item collection times is " + ItemCollectionTimes);
         print("Collision times is " + CollisionTimes);
@@ -52,5 +57,8 @@ public class GameManager : MonoBehaviour
         TravelDistance = controller.ComputeTravelDistance();
         print("Maximum speed is " + maximumSpeed);
         print("Travel distance is " + TravelDistance);
+
+        playerScore.gameObject.SetActive(true);
+        playerScore.DisplayPlayerScore(gameTime, ItemCollectionTimes, CollisionTimes, maximumSpeed, TravelDistance);
     }
 }
