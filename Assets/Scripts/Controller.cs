@@ -199,6 +199,9 @@ public class Controller : MonoBehaviour
         return maxSpeedPlayerReach;
     }
 
-
+    public float GetPlayerCurrentSpeed()
+    {
+        return speed;
+    }
     
 }

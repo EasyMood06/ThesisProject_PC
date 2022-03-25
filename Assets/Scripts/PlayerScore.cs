@@ -13,10 +13,10 @@ public class PlayerScore : MonoBehaviour
 
     public void DisplayPlayerScore(float gameTime, int itemCollectionTimes, int collisionTimes, float maximumSpeed, float travelDistance)
     {
-        GameTime.GetComponent<Text>().text = "Game time is " + gameTime;
-        ItemCollectionTime.GetComponent<Text>().text = "Item collection time is " + itemCollectionTimes;
+        GameTime.GetComponent<Text>().text = "Game time is " + System.Math.Round(gameTime,2) + " sec";
+        ItemCollectionTime.GetComponent<Text>().text = "Number of items collect is " + itemCollectionTimes;
         CollisionTime.GetComponent<Text>().text = "Collision time is " + collisionTimes;
-        MaxSpeed.GetComponent<Text>().text = "Maximum speed is " + maximumSpeed;
-        TravelDistance.GetComponent<Text>().text = "Travel distance is " + travelDistance;
+        MaxSpeed.GetComponent<Text>().text = "Maximum speed is " + System.Math.Round(maximumSpeed,2);
+        TravelDistance.GetComponent<Text>().text = "Travel distance is " + System.Math.Round(travelDistance,2);
     }
 }
