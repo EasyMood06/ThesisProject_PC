@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         
 
         gameTime = 0f;
-        remainTime = 10f;
+        remainTime = 100f;
         initialTime = remainTime;
         ItemCollectionTimes = 0;
         CollisionTimes = 0;
@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
 
         // Update Time
         RectTransform BarRectTransform = HPBar.GetComponent<RectTransform>();
-        BarRectTransform.sizeDelta = new Vector2 ((remainTime / initialTime) * HPbarWidth, BarRectTransform.sizeDelta.y);
+        BarRectTransform.anchoredPosition = new Vector2 (-(1 - remainTime / initialTime) * HPbarWidth, BarRectTransform.anchoredPosition.y);
     }
 
     void RankBoardUpdate() 

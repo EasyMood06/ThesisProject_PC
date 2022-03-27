@@ -3668,7 +3668,7 @@ MonoBehaviour:
   CurrentSpeed: 0
   TravelDistance: 0
   HPbarWidth: 0
-  HPBar: {fileID: 1717301267}
+  HPBar: {fileID: 1701009864}
   HackerScore: 999999999
   ProScore: 5000
   NoobScore: 500
@@ -3805,7 +3805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.074986, y: 0.18796}
+  m_AnchoredPosition: {x: -0, y: 0.18796}
   m_SizeDelta: {x: 700, y: 67.196}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1701009866
